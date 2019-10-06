@@ -140,7 +140,7 @@ func (u *Upgrader) Upgrade(w http.ResponseWriter, r *http.Request, responseHeade
 	}
 
 	checkOrigin := u.CheckOrigin
-	if checkOrigin != nil; {
+	if checkOrigin != nil {
 		if !checkOrigin(r) {
 			return u.returnError(w, r, http.StatusForbidden, "websocket: request origin not allowed by Upgrader.CheckOrigin")
 		}
